@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'figaro'
 gem 'bootstrap-sass', '~> 3.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'devise'
