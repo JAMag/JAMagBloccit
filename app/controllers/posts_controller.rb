@@ -34,5 +34,6 @@ class PostsController < ApplicationController
     else
       flash[:error] = "There was an error saving the post. Please try again."
       render :edit
-  end  
+   end 
+  end
 end
