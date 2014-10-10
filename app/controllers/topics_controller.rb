@@ -21,7 +21,7 @@ class TopicsController < ApplicationController
   end
   
   def create
-    @topic = Topic.new(params.require(:topic).permit (:name, :description, :public))
+    @topic = Topic.new(params.require(:topic).permit(:name, :description, :public))
     authroize @topic
     if @topic.save
       redirect_to @topic, notice: "Topic was saved successfully."

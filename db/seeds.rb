@@ -9,7 +9,7 @@ require 'faker'
   user.skip_confirmation!
   user.save!
 end
-user = User.all
+users = User.all
 
 # Create Topics
 15.times do
