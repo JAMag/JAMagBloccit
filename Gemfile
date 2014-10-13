@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+gem 'fog'
+gem 'carrierwave'
+gem 'mini_magick', '~> 3.5.0'
 gem 'will_paginate', '~> 3.0.5'
 gem 'redcarpet'
 gem 'pundit'
