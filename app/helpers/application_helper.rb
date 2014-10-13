@@ -1,3 +1,4 @@
+require 'redcarpet'
 module ApplicationHelper
   def form_group_tag(errors, &block)
     if errors.any?
