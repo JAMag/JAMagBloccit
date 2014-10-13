@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'redcarpet'
 gem 'pundit'
 gem 'figaro'
 gem 'bootstrap-sass', '~> 3.1.1'
