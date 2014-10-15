@@ -35,19 +35,9 @@ posts = Post.all
 100.times do
   Comment.create!(
     post: posts.sample,
-    body: Faker::Lorem.paragraph
+    body: Faker::Lorem.paragraph,
+    user: users.sample
     )
-end
-
-post count = Post.count
-User.all.each do |user|
-  rand(30..50).times do
-    p = Post.find(rand(1..post_count))
-    c = user.comments.create(
-      body: Faker::Lorem.paragraphs(rand(1..2)).join("\n"),
-      post: p)
-    c.update_attribute(:created_at, Time.now - rand(600..31536000))
-  end
 end
 
 # Create an admin user
@@ -79,7 +69,6 @@ member = User.new(
 member.skip_confirmation!
 member.save!
 
-
 puts "Seed finished"
-puts "#{Post.count} posts created"
+puts "#{posts.count} posts created"
 puts "#{Comment.count} comments created"
