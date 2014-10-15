@@ -17,12 +17,12 @@ class TopicsController < ApplicationController
   
   def edit
     @topic = Topic.find(params[:id])
-    authorze @topic
+    authorize @topic
   end
   
   def create
     @topic = current_user.topic.build(post_params)
-    authroize @topic
+    authorize @topic
     if @topic.save
       redirect_to @topic, notice: "Topic was saved successfully."
     else
