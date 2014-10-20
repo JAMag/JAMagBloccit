@@ -63,7 +63,6 @@ class PostsController < ApplicationController
         flash[:error] = "There was an error deleting the post."
         render :show
       end
->>>>>>> 2bbcad86527a31425f17704dd5c9f66274143c57
     end
   end
 
