@@ -45,6 +45,28 @@ class PostsController < ApplicationController
     end
   end
 
+    private
+    def post_params
+      params.require(:post).permit(:title, :body)
+    end
+
+    def destroy
+      @topic = Topic.find(params[:topic_id])
+      @post = Post.find(params[:id])
+      title = @post.title
+      authorize @post
+
+      if @post.destroy
+        flash[:notice] = "\"#{title}\" was deleted successfully."
+        redirect_to @topic
+      else
+        flash[:error] = "There was an error deleting the post."
+        render :show
+      end
+>>>>>>> 2bbcad86527a31425f17704dd5c9f66274143c57
+    end
+  end
+
   private
 
   def post_params
